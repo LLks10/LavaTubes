@@ -1,8 +1,11 @@
-﻿namespace LavaTubes;
+﻿using System.Diagnostics.Contracts;
+
+namespace LavaTubes;
 
 static internal class PartASolver
 {
-	public static int CalculateRiskLevel(in Field field)
+	[Pure]
+	public static int CalculateRiskLevel(Field field)
 	{
 		int count = 0;
 

@@ -4,10 +4,11 @@ sealed internal class PartBSolver
 {
 	const char WALL = '9';
 
-	Field field;
+	readonly Field field;
+	readonly int[] basinSizes = new int[3];
+
 	int smallestSize = 0;
 	int smallestIdx = 0;
-	int[] basinSizes = new int[3];
 
 	private PartBSolver(Field field)
 	{
@@ -25,7 +26,7 @@ sealed internal class PartBSolver
 					continue;
 
 				int basinSize = FillBasin(x, y);
-				InsertBasin(basinSize);
+				StoreBasinSize(basinSize);
 
 				x++; // Two adjacent basins is impossible
 			}
@@ -53,7 +54,7 @@ sealed internal class PartBSolver
 		return size;
 	}
 
-	private void InsertBasin(int size)
+	private void StoreBasinSize(int size)
 	{
 		if (size < smallestSize)
 			return;
@@ -62,7 +63,6 @@ sealed internal class PartBSolver
 
 		// Calculate new smallest basin
 		smallestSize = int.MaxValue;
-
 		for (int i = 0; i < basinSizes.Length; i++)
 			if (basinSizes[i] < smallestSize)
 			{
