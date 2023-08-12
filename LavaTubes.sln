@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LavaTubes", "LavaTubes.csproj", "{21B5F39C-E3D1-4659-AA80-E60E5FEB4CDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LavaTubes", "LavaTubes\LavaTubes.csproj", "{21B5F39C-E3D1-4659-AA80-E60E5FEB4CDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LavaTubesTests", "..\LavaTubesTests\LavaTubesTests.csproj", "{4BC729E4-E04F-4F01-8F25-AAC38370997E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LavaTubesTests", "LavaTubesTests\LavaTubesTests.csproj", "{4BC729E4-E04F-4F01-8F25-AAC38370997E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

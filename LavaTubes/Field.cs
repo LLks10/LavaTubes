@@ -9,7 +9,7 @@ internal sealed class Field
 	{
 		this.field = field;
 		Width = width;
-		Height = field.Count / width;
+		Height = width != 0 ? field.Count / width : 0;
 	}
 
 	public int Width { get; init; }

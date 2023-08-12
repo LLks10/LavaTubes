@@ -7,7 +7,7 @@ internal class PartASolver
 		int count = 0;
 
 		for (int y = 0; y < field.Height; y++)
-			for (int x = 0; x < field.Height; x++)
+			for (int x = 0; x < field.Width; x++)
 			{
 				char curr = field[x, y];
 				if (curr < field.GetBounded(x + 1, y) &&
