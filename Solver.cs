@@ -1,6 +1,6 @@
 ﻿namespace LavaTubes;
 
-class PartASolver
+internal class PartASolver
 {
 	public static int CalculateRiskLevel(in Field field)
 	{
@@ -25,7 +25,7 @@ class PartASolver
 	}
 }
 
-class PartBSolver
+internal class PartBSolver
 {
 	const char WALL = '9';
 

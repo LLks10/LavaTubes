@@ -1,6 +1,6 @@
 ﻿namespace LavaTubes;
 
-sealed class Field
+internal sealed class Field
 {
 	const char BOUNDARY = (char)('9' + 1);
 	private readonly List<char> field;
