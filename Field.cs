@@ -46,9 +46,9 @@ sealed class Field
 
 	public char GetBounded(int x, int y)
 	{
-		if (!InBounds(x, y))
-			return BOUNDARY;
+		if (InBounds(x, y))
+			return this[x, y];
 
-		return this[x, y];
+		return BOUNDARY;
 	}
 }
