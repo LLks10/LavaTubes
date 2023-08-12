@@ -3,7 +3,7 @@
 sealed class Field
 {
 	const char BOUNDARY = (char)('9' + 1);
-	private readonly IReadOnlyList<char> field;
+	private readonly List<char> field;
 
 	private Field(List<char> field, int width)
 	{
@@ -35,7 +35,11 @@ sealed class Field
 		return new Field(field, width);
 	}
 
-	public char this[int x, int y] => field[x + y * Width];
+	public char this[int x, int y]
+	{
+		get => field [x + y * Width];
+		set => field[x + y * Width] = value;
+	} 
 
 	public bool InBounds(int x, int y) =>
 		x >= 0 && y >= 0 && x < Width && y < Height;
